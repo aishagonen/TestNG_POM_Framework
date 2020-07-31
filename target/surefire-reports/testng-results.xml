@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="11" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="45025" started-at="2020-07-27T15:44:55 EDT" finished-at="2020-07-27T15:45:40 EDT">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="45025" started-at="2020-07-27T15:44:55 EDT" finished-at="2020-07-27T15:45:40 EDT">
+      <class name="com.hubspot.tests.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hubspot.tests.LoginPageTest@3f49dace]" name="setUp" is-config="true" duration-ms="14221" started-at="2020-07-27T15:45:21 EDT" finished-at="2020-07-27T15:45:35 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getTitle()[pri:1, instance:com.hubspot.tests.LoginPageTest@3f49dace]" name="getTitle" duration-ms="20" started-at="2020-07-27T15:45:36 EDT" description="Get title from HubSpot login page." finished-at="2020-07-27T15:45:36 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTitle -->
+        <test-method status="PASS" signature="verifySignUpLinkTest()[pri:5, instance:com.hubspot.tests.LoginPageTest@3f49dace]" name="verifySignUpLinkTest" duration-ms="164" started-at="2020-07-27T15:45:36 EDT" description="Verify signUpLink is displayed or not." finished-at="2020-07-27T15:45:36 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpLinkTest -->
+        <test-method status="PASS" signature="login_invalidTestCase(java.lang.String, java.lang.String)[pri:6, instance:com.hubspot.tests.LoginPageTest@3f49dace]" name="login_invalidTestCase" duration-ms="1443" started-at="2020-07-27T15:45:36 EDT" data-provider="getLoginInvalidData" finished-at="2020-07-27T15:45:37 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bill@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_invalidTestCase -->
+        <test-method status="PASS" signature="login_invalidTestCase(java.lang.String, java.lang.String)[pri:6, instance:com.hubspot.tests.LoginPageTest@3f49dace]" name="login_invalidTestCase" duration-ms="632" started-at="2020-07-27T15:45:37 EDT" data-provider="getLoginInvalidData" finished-at="2020-07-27T15:45:38 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Jimmy@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_invalidTestCase -->
+        <test-method status="PASS" signature="login_invalidTestCase(java.lang.String, java.lang.String)[pri:6, instance:com.hubspot.tests.LoginPageTest@3f49dace]" name="login_invalidTestCase" duration-ms="643" started-at="2020-07-27T15:45:38 EDT" data-provider="getLoginInvalidData" finished-at="2020-07-27T15:45:39 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test12345]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_invalidTestCase -->
+        <test-method status="PASS" signature="login_invalidTestCase(java.lang.String, java.lang.String)[pri:6, instance:com.hubspot.tests.LoginPageTest@3f49dace]" name="login_invalidTestCase" duration-ms="592" started-at="2020-07-27T15:45:39 EDT" data-provider="getLoginInvalidData" finished-at="2020-07-27T15:45:39 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[yummy]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[yummy]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_invalidTestCase -->
+        <test-method status="PASS" signature="login_invalidTestCase(java.lang.String, java.lang.String)[pri:6, instance:com.hubspot.tests.LoginPageTest@3f49dace]" name="login_invalidTestCase" duration-ms="573" started-at="2020-07-27T15:45:39 EDT" data-provider="getLoginInvalidData" finished-at="2020-07-27T15:45:40 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_invalidTestCase -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hubspot.tests.LoginPageTest@3f49dace]" name="tearDown" is-config="true" duration-ms="241" started-at="2020-07-27T15:45:40 EDT" finished-at="2020-07-27T15:45:40 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.hubspot.tests.LoginPageTest -->
+      <class name="com.hubspot.tests.HomePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.hubspot.tests.HomePageTest@31a5c39e]" name="setUp" is-config="true" duration-ms="25895" started-at="2020-07-27T15:44:55 EDT" finished-at="2020-07-27T15:45:21 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyHomePageTitle()[pri:1, instance:com.hubspot.tests.HomePageTest@31a5c39e]" name="verifyHomePageTitle" duration-ms="40" started-at="2020-07-27T15:45:35 EDT" description="This method gets the title from Home page" finished-at="2020-07-27T15:45:35 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageTitle -->
+        <test-method status="PASS" signature="verifyHomePageHeaderTest()[pri:2, instance:com.hubspot.tests.HomePageTest@31a5c39e]" name="verifyHomePageHeaderTest" duration-ms="134" started-at="2020-07-27T15:45:35 EDT" description="This method verifies home page header" finished-at="2020-07-27T15:45:36 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageHeaderTest -->
+        <test-method status="PASS" signature="verifyLoggedInUserInfo()[pri:3, instance:com.hubspot.tests.HomePageTest@31a5c39e]" name="verifyLoggedInUserInfo" duration-ms="163" started-at="2020-07-27T15:45:36 EDT" description="This method verfies account name in home page" finished-at="2020-07-27T15:45:36 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoggedInUserInfo -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hubspot.tests.HomePageTest@31a5c39e]" name="tearDown" is-config="true" duration-ms="159" started-at="2020-07-27T15:45:40 EDT" finished-at="2020-07-27T15:45:40 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.hubspot.tests.HomePageTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
