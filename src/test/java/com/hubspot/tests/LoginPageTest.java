@@ -24,8 +24,8 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
-@Epic("Epic - 101 : create login features")
-@Feature("US -501  : Create test  for login on HubSpot")
+@Epic("Epic - 101 : Create login features")
+@Feature("US -501  : Create test  for login on HubSpot")  	// US : User Story
 public class LoginPageTest {
 
 	public WebDriver driver;
@@ -43,7 +43,7 @@ public class LoginPageTest {
 		basePage = new BasePage();
 		//driver = basePage.initialize_driver();
 		prop = basePage.initialize_properties();
-		
+				// CROSS BROWSER TESTING icin if-else'i kullandik.
 								//		if (browser.equals(null)) {
 								//			browser = prop.getProperty("browser"); 
 								//		} else {
@@ -61,7 +61,7 @@ public class LoginPageTest {
 	
 	
 	@Test(priority=2, enabled=true, groups="sanity", description="Login test is using valid username and password.")
-	@Description("Login page credentials")
+	@Description("Login page credentials") 	// comes from Allure report. 
 	@Severity(SeverityLevel.CRITICAL)
 	public void loginTest1() {
 		//loginPage.doLogin("kralshakirr@gmail.com", "Lompenlompen1");
@@ -78,15 +78,17 @@ public class LoginPageTest {
 //		loginPage.doLogin(prop.getProperty("incorrectuser"), prop.getProperty("password"));
 //	}
 	
-//	@Test(priority=4, enabled=false, description="Login test is using invalid username and invalid password.")
-//	public void loginTest3() {
-//		//loginPage.doLogin("kralshakir@gmail.com", "lompenlompen");
-//		//loginPage.doLogin(prop.getProperty("incorrectuser"), prop.getProperty("incorrectpass"));
-//		HomePage homePage = loginPage.doLogin(userCred);
-//		String accountName = homePage.verifyLoggedInAccountName();
-//		System.out.println("Logged in account name: " + accountName);
-//		Assert.assertEquals(accountName, prop.getProperty("accountname"));
-//	}
+	@Test(priority=4, enabled=true, description="Login test is using invalid username and invalid password.")
+	@Description("Login page test feature")
+	@Severity(SeverityLevel.BLOCKER)
+	public void loginTest3() {
+		//loginPage.doLogin("kralshakir@gmail.com", "lompenlompen");
+		//loginPage.doLogin(prop.getProperty("incorrectuser"), prop.getProperty("incorrectpass"));
+		HomePage homePage = loginPage.doLogin(userCred);
+		String accountName = homePage.verifyLoggedInAccountName();
+		System.out.println("Logged in account name: " + accountName);
+		Assert.assertEquals(accountName, prop.getProperty("accountname"));
+	}
 	
 	@Test(priority=1, enabled=true, groups="sanity", description="Get title from HubSpot login page.")
 	@Description("Verify login page title")
@@ -105,6 +107,7 @@ public class LoginPageTest {
 	}
 	
 	@Test(priority=5, enabled=true, groups="regression", description="Verify signUpLink is displayed or not.")
+	@Description()
 	public void verifySignUpLinkTest() {
 		Assert.assertTrue(loginPage.checkSignUpLink());
 	}
@@ -143,7 +146,7 @@ public class LoginPageTest {
 /*
 	- TestNG execute the methods according the alphabetical order if you don't add 'priority' keyword to method description. 
 	- If you add 'enabled=false' keyword to description of method so program doesn't execute that one. 
-	- If you want to execute just one method, so go that method and click right > chose Run As. 
+	- If you want to execute just one method, so go that method and click right > choose Run As. 
 	
 	- Assertion concept is used in TestNG. Javada if-else kullaniyoruz. TestNG'de Assertion kullan. 
 	- For in case of the test case is failed, you can add message in Assertion. 

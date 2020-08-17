@@ -174,7 +174,6 @@ public class BasePage {
 		return path;
 	}
 	
-	
 	public void quitBrowser() {
 		try {
 			driver.quit();

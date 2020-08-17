@@ -8,8 +8,12 @@ import com.hubspot.util.ElementUtil;
 import com.hubspot.util.JavaScriptUtil;
 import com.mongodb.operation.CreateCollectionOperation;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
 
+@Epic("Epic - 103 : Create contacts  page features")
+@Feature("US -503  : Create test  for contacts page on HubSpot") 
 public class ContactsPage extends BasePage{
 	
 	WebDriver driver;
@@ -33,7 +37,7 @@ public class ContactsPage extends BasePage{
 		elementUtil.waitForTitlePresent("Contacts");
 		return elementUtil.doGetPageTitle();	
 	}
-	@Step("Create new contact with {0}, {1}, {2}, {3}")
+	@Step("Create new contact with {0}, {1}, {2}, {3}")		// comes from Allure report
 	public void createNewContact(String  mail, String FN, String LN, String jobT) {
 		elementUtil.waitForElementPresent(createContactButton);
 		elementUtil.doClick(createContactButton);

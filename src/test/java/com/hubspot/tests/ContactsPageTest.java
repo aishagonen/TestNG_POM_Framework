@@ -15,6 +15,14 @@ import com.hubspot.pages.LoginPage;
 import com.hubspot.util.Credentials;
 import com.hubspot.util.ExcelUtil;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
+@Epic("Epic - 102 : Create home  page features")
+@Feature("US -502  : Create test  for home page on HubSpot") 
 public class ContactsPageTest {
 
 	public WebDriver driver;
@@ -38,7 +46,10 @@ public class ContactsPageTest {
 		contactsPage = homePage.goToContactsPage();
 	}
 	
-	@Test(priority=1)
+	
+	@Test(priority=1, description="This method gets the title from Contacts page")
+	@Description("Verify contacts page title")
+	@Severity(SeverityLevel.NORMAL)
 	public void verifyContactsPageTitle() {
 		String title = contactsPage.getContactsPageTitle();
 		System.out.println(title);
@@ -51,7 +62,9 @@ public class ContactsPageTest {
 		return data;
 	}
 	
-	@Test(priority=2, dataProvider="getContactsTestData")
+	@Test(priority=2, dataProvider="getContactsTestData",description="create new contacts")
+	@Description("Create new contacts ")
+	@Severity(SeverityLevel.BLOCKER)
 	public  void createContactsTest(String email, String firstname, String lastname, String jobtitle) {
 		contactsPage.createNewContact(email, firstname, lastname, jobtitle);
 	}

@@ -8,7 +8,7 @@
 	<!-- <listener class-name="com.hubspot.listener.TestAllureListener" /> -->
     <listener class-name="com.hubspot.listener.ExtentReportListener" />
     <!--  <listener class-name="com.hubspot.listener.pdfListener" /> -->
-    <!--  <listener class-name="com.hubspot.listener.TestAllureListener" /> -->
+     <!-- <listener class-name="com.hubspot.listener.TesultsListener" /> -->
     
 	</listeners>
 	
@@ -16,16 +16,17 @@
 	<parameter  name="browser" value="chrome"/>
   <test name="Hubspot Functional Regression Test">
   
-   <groups>
+   <!-- <groups>
    <run>
       <include name="sanity"/>
       <include name="regression"/>
    </run>
-   </groups>
+   </groups> -->
    
     <classes> 
       <class name="com.hubspot.tests.LoginPageTest"/>
-      <class name="com.hubspot.tests.HomePageTest"/>     
+      <class name="com.hubspot.tests.HomePageTest"/>
+      <class name="com.hubspot.tests.ContactsPageTest"/>     
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
